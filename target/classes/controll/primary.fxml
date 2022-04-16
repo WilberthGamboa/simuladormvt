@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <VBox fx:id="vBoxfather" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controll.PrimaryController">
    <children>
       <VBox fx:id="vBoxtitle" alignment="CENTER" prefHeight="46.0" prefWidth="600.0">
@@ -27,11 +26,11 @@
                <children>
                   <VBox fx:id="vboxFatherTables" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
                      <children>
-                        <VBox prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                        <VBox maxHeight="150.0" maxWidth="1.7976931348623157E308" style="-fx-background-color: black;" VBox.vgrow="ALWAYS">
                            <children>
-                              <TableView prefHeight="125.0" prefWidth="319.0" VBox.vgrow="ALWAYS">
+                              <TableView fx:id="tablaMuestra" editable="true" stylesheets="@tabla.css" VBox.vgrow="NEVER">
                                 <columns>
-                                  <TableColumn fx:id="proceso" prefWidth="75.0" text="Proceso" />
+                                    <TableColumn fx:id="proceso" prefWidth="75.0" text="Proceso" />
                                   <TableColumn fx:id="tamanio" prefWidth="75.0" text="Tamaño" />
                                     <TableColumn fx:id="llegada" prefWidth="75.0" text="Tiempo de llegada" />
                                     <TableColumn fx:id="duracion" prefWidth="75.0" text="Duración" />
@@ -41,9 +40,12 @@
                                  </columnResizePolicy>
                               </TableView>
                            </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
                         </VBox>
                         <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: gray;" VBox.vgrow="ALWAYS" />
-                        <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: brown;" VBox.vgrow="ALWAYS" />
+                        <VBox prefHeight="200.0" style="-fx-background-color: brown;" VBox.vgrow="ALWAYS" />
                      </children>
                      <HBox.margin>
                         <Insets />
@@ -54,7 +56,7 @@
             <HBox fx:id="hboxright" alignment="CENTER_RIGHT" layoutX="170.0" layoutY="10.0" maxHeight="1.7976931348623157E308" prefHeight="341.0" prefWidth="281.0" style="-fx-background-color: red;" HBox.hgrow="SOMETIMES" />
          </children>
       </HBox>
-      <VBox fx:id="vBoxFooter" alignment="BOTTOM_CENTER" prefHeight="32.0" prefWidth="600.0" style="-fx-background-color: blue;">
+      <VBox fx:id="vBoxFooter" alignment="BOTTOM_CENTER" prefHeight="32.0" prefWidth="630.0" style="-fx-background-color: blue;">
          <children>
             <Button fx:id="btnstep" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" text="Paso n" />
          </children>
