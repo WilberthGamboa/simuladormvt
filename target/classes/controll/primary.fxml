@@ -53,7 +53,10 @@
                   </VBox>
                </children>
             </HBox>
-            <HBox fx:id="hboxright" alignment="CENTER_RIGHT" layoutX="170.0" layoutY="10.0" maxHeight="1.7976931348623157E308" prefHeight="341.0" prefWidth="281.0" style="-fx-background-color: red;" HBox.hgrow="SOMETIMES" />
+            <HBox fx:id="hboxright" layoutX="170.0" layoutY="10.0" maxHeight="1.7976931348623157E308" prefHeight="341.0" prefWidth="281.0" style="-fx-background-color: red;" HBox.hgrow="SOMETIMES">
+               <children>
+                  <VBox fx:id="sistemaOperativo" alignment="BOTTOM_RIGHT" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="168.0" prefWidth="281.0" style="-fx-background-color: green;" HBox.hgrow="ALWAYS" />
+               </children></HBox>
          </children>
       </HBox>
       <VBox fx:id="vBoxFooter" alignment="BOTTOM_CENTER" prefHeight="32.0" prefWidth="630.0" style="-fx-background-color: blue;">

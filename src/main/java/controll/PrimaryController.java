@@ -12,8 +12,11 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.stage.Window;
+import javafx.stage.WindowEvent;
 import model.TableMVT;
 
 public class PrimaryController implements Initializable {
@@ -59,6 +62,8 @@ public class PrimaryController implements Initializable {
 
     @FXML
     private VBox vboxFatherTables;
+    @FXML
+    private VBox sistemaOperativo;
 
     ObservableList<TableMVT> list = FXCollections.observableArrayList(
 
@@ -78,6 +83,10 @@ public class PrimaryController implements Initializable {
         llegada.setCellValueFactory(new PropertyValueFactory<TableMVT,Integer>("llegada"));
         duracion.setCellValueFactory(new PropertyValueFactory<TableMVT,Integer>("duracion"));
         tablaMuestra.setItems(list);
+        
     }
-
+    
+   
+   
+    
 }
