@@ -5,11 +5,14 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="vBoxfather" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controll.PrimaryController">
+<VBox fx:id="vBoxfather" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseMoved="#actualizarPantalla" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controll.PrimaryController">
    <children>
       <VBox fx:id="vBoxtitle" alignment="CENTER" prefHeight="46.0" prefWidth="600.0">
          <children>
@@ -55,13 +58,29 @@
             </HBox>
             <HBox fx:id="hboxright" layoutX="170.0" layoutY="10.0" maxHeight="1.7976931348623157E308" prefHeight="341.0" prefWidth="281.0" style="-fx-background-color: red;" HBox.hgrow="SOMETIMES">
                <children>
-                  <VBox fx:id="sistemaOperativo" alignment="BOTTOM_RIGHT" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="168.0" prefWidth="281.0" style="-fx-background-color: green;" HBox.hgrow="ALWAYS" />
+                  <VBox fx:id="mvt" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: green;" HBox.hgrow="ALWAYS">
+                     <children>
+                        <VBox fx:id="so" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: cyan;" VBox.vgrow="NEVER" />
+                        <GridPane fx:id="panelGrid" gridLinesVisible="true" maxHeight="-Infinity" minHeight="0.0" prefHeight="0.0" style="-fx-background-color: yellow;" visible="false" VBox.vgrow="SOMETIMES">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints fx:id="pane0" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="0.0" vgrow="ALWAYS" />
+                            <RowConstraints fx:id="pane1" maxHeight="-Infinity" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                              <RowConstraints fx:id="pane2" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="0.0" vgrow="SOMETIMES" />
+                              <RowConstraints fx:id="pane3" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="0.0" vgrow="SOMETIMES" />
+                              <RowConstraints fx:id="pane4" maxHeight="-Infinity" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                        </GridPane>
+                     </children>
+                  </VBox>
                </children></HBox>
          </children>
       </HBox>
       <VBox fx:id="vBoxFooter" alignment="BOTTOM_CENTER" prefHeight="32.0" prefWidth="630.0" style="-fx-background-color: blue;">
          <children>
-            <Button fx:id="btnstep" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" text="Paso n" />
+            <Button fx:id="btnstep" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" onAction="#paso" text="Paso n" />
          </children>
       </VBox>
    </children>

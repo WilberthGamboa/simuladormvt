@@ -22,6 +22,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("primary"), 640, 480);
+        /*
         stage.heightProperty().addListener((obs, oldVal, newVal) -> {
             HBox hbox = (HBox) scene.lookup("#hboxright");
             VBox vbox = (VBox) scene.lookup("#sistemaOperativo");
@@ -33,11 +34,13 @@ public class App extends Application {
           // vbox.setMinHeight(x);
             // Do whatever you want
        });
-        
+        */
+
         stage.setScene(scene);
         stage.show();
     }
 
+    
     static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
     }
